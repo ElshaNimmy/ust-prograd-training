@@ -5,5 +5,6 @@ public class Testfruit {
         apple.show();
         guava.color();
         apple.shape();
+        guava.shape();
     }
 }
