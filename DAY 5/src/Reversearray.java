@@ -1,27 +1,22 @@
-class Print<E>{
-    public void displayArray(E[] array){
-        Object[] newArray = new Object[array.length];
+class Print<E> {
 
-        for (int i = 0; i <array.length ; i++)
+    public void displayArray(E[] array) {
 
-        {
-            newArray[i]=array[array.length-i-1];
-        }
-        for (int i = 0; i <newArray.length ; i++)
+        for (int i = array.length-1;i>=0; i--) {
 
-        {
-            System.out.print(newArray[i]);
+            System.out.print(array[i]);
         }
     }
 }
+
 public class Reversearray {
 
     public static void main(String[] args) {
 
-        Integer[] integerArray = {1,2,3};
-        String[] stringArray = {"Hy","Malayalam"};
+        Integer[] integerArray = new Integer[]{1, 2, 3};
+        String[] stringArray = new String[]{"Hy", "Malayalam"};
         Print<Integer> ob1 = new Print<Integer>();
-        Print<String> ob2 =new Print<String>();
+        Print<String> ob2 = new Print<String>();
         ob1.displayArray(integerArray);
         ob2.displayArray(stringArray);
     }
