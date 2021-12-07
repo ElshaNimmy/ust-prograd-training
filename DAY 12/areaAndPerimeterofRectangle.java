@@ -6,10 +6,12 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class AreaofRectangleTest {
     public Rectangle area;
+    public Rectangle perimeter;
     @Nested
     class TestingAreaFunction{
         @BeforeEach
         public  void setArea(){
+
             area =new Rectangle();
         }
         @Test
@@ -25,6 +27,26 @@ public class AreaofRectangleTest {
                 assertEquals(ans, expected);
             }
         }
+        @Nested
+        class TestingPerimeterFunction{
+            @BeforeEach
+            public  void setPerimeter(){
+
+                perimeter =new Rectangle();
+            }
+            @Test
+            public void perimeterofLengthEightandBreadthThreeIsTwentyTwo(){
+                double ans =perimeter.perimeter(8,3);
+                double expected =22;
+                assertEquals(ans,expected);
+            }
+            @Test
+            public void perimeterofLengthofFiveandBreadthThreeIsSixteen() {
+                double ans = perimeter.perimeter(5, 3);
+                double expected = 16;
+                assertEquals(ans, expected);
+            }
+
         }
     }
 
