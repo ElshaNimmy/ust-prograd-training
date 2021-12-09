@@ -1,52 +1,66 @@
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
-
-public class AreaofRectangleTest {
-    public Rectangle area;
-    public Rectangle perimeter;
+public class AreaOfRectangleTest {
     @Nested
     class TestingAreaFunction{
-        @BeforeEach
-        public  void setArea(){
 
-            area =new Rectangle();
+        @Test
+        public void areaOfLengthTenAndBreadthFiveIsFifty(){
+            Rectangle rectangle = new Rectangle(10,5);
+            double actualArea = rectangle.area();
+            double expectedArea = 50;
+            Assertions.assertEquals(expectedArea,actualArea);
         }
         @Test
-        public void areaofLengthEightandBreadthThreeIsTwentyFour(){
-            double ans =area.area(8,3);
-            double expected =24;
-            assertEquals(ans,expected);
-            }
-            @Test
-        public void areaofLengthofFiveandBreadthThreeIsFifteen() {
-                double ans = area.area(5, 3);
-                double expected = 15;
-                assertEquals(ans, expected);
-            }
+        public void throwExceptionWhenMeasurementsBecomeNegativeOrZero(){
+            Assertions.assertThrows(IllegalArgumentException.class, () -> new Rectangle(-2,-4);
+
+            };
         }
-        @Nested
-        class TestingPerimeterFunction{
-            @BeforeEach
-            public  void setPerimeter(){
+        @Test
+        public void areaOfLengthEightAndBreadthThreeIsTwentyFour(){
+            Rectangle rectangle = new Rectangle(8,3);
+            double actualArea = rectangle.area();
+            double expectedArea = 24;
+            Assertions.assertEquals(expectedArea,actualArea);
+        }
 
-                perimeter =new Rectangle();
-            }
-            @Test
-            public void perimeterofLengthEightandBreadthThreeIsTwentyTwo(){
-                double ans =perimeter.perimeter(8,3);
-                double expected =22;
-                assertEquals(ans,expected);
-            }
-            @Test
-            public void perimeterofLengthofFiveandBreadthThreeIsSixteen() {
-                double ans = perimeter.perimeter(5, 3);
-                double expected = 16;
-                assertEquals(ans, expected);
-            }
-
+        @Test
+        public void verifyAreaForDecimalMeasurements(){
+            Rectangle rectangle = new Rectangle(6.5,5);
+            double actualArea = rectangle.area();
+            double expectedArea= 32.5;
+            Assertions.assertEquals(expectedArea,actualArea);
         }
     }
 
+    @Nested
+    class TestingPerimeterFunction{
+
+        @Test
+        public void perimeterOfLengthTenAndBreadthFiveIsThirty(){
+            Rectangle rectangle = new Rectangle(10,5);
+            double actualArea= rectangle.perimeter();
+            double expectedArea = 30;
+            Assertions.assertEquals(expectedArea,actualArea);
+        }
+        @Test
+        public void verifyPerimeterForDecimalMeasurements(){
+            Rectangle ar = new Rectangle(5.4,3.2);
+            double actualPerimeter = ar.perimeter();
+            double expectedPerimeter = 17.2;
+            Assertions.assertEquals(expectedPerimeter,actualPerimeter);
+        }
+        @Test
+        public void throwExceptionWhenMeasurementsBecomeNegativeOrZero(){
+            Assertions.assertThrows(IllegalArgumentException.class, () -> new Rectangle(-2,-4);
+
+        }
+
+
+
+    }
