@@ -1,6 +1,3 @@
-import java.text.DecimalFormat;
-import java.util.Scanner;
-
 public class CurrencyConverterMain {
 
                 public static void main(String[] args) {
@@ -36,7 +33,7 @@ public class CurrencyConverterMain {
                                 System.out.println("Your " + amount + " Rupee is : " + f.format(euro) + " Euro");
 
                                 yen = amount / 0.63;
-                                System.out.println("Your " + amount + " Rupee is : " + f.format(yen) + " Yen");
+                                System.out.println("Your " + amount + " Rupee is : " + f.format(yen) + " Renminbi");
 
                                 ringgit = amount / 16;
                                 System.out.println("Your " + amount + " Rupee is : " + f.format(ringgit) + " ringgit");
@@ -59,7 +56,7 @@ public class CurrencyConverterMain {
                                 System.out.println("Your " + amount + " Dollar is : " + f.format(euro) + " Euro");
 
                                 yen = amount * 111.087;
-                                System.out.println("Your " + amount + " Dollar is : " + f.format(yen) + " Yen");
+                                System.out.println("Your " + amount + " Dollar is : " + f.format(yen) + " Renminbi");
 
                                 ringgit = amount * 4.17;
                                 System.out.println("Your " + amount + " Dollar is : " + f.format(ringgit) + " ringgit");
@@ -82,7 +79,7 @@ public class CurrencyConverterMain {
                                     System.out.println("Your " + amount + " pound is : " + f.format(euro) + " Euro");
 
                                     yen = amount * 140.93;
-                                    System.out.println("Your " + amount + " pound is : " + f.format(yen) + " Yen");
+                                    System.out.println("Your " + amount + " pound is : " + f.format(yen) + " Renminbi");
 
                                     ringgit = amount * 5.29;
                                     System.out.println("Your " + amount + " pound is : " + f.format(ringgit) + " ringgit");
@@ -104,7 +101,7 @@ public class CurrencyConverterMain {
                                 System.out.println("Your " + amount + " euro is : " + f.format(pound) + " Pound");
 
                                 yen = amount * 127.32;
-                                System.out.println("Your " + amount + " euro is : " + f.format(yen) + " Yen");
+                                System.out.println("Your " + amount + " euro is : " + f.format(yen) + " Renminbi");
 
                                 ringgit = amount * 4.78;
                                 System.out.println("Your " + amount + " euro is : " + f.format(ringgit) + " ringgit");
@@ -126,7 +123,7 @@ public class CurrencyConverterMain {
                                 System.out.println("Your " + amount + " yen is : " + f.format(pound) + " Pound");
 
                                 euro = amount * 0.007;
-                                System.out.println("Your " + amount + " yen is : " + f.format(euro) + " Euro");
+                                System.out.println("Your " + amount + " Renminbi is : " + f.format(euro) + " Renminbi");
 
                                 ringgit = amount * 0.037;
                                 System.out.println("Your " + amount + " yen is : " + f.format(ringgit) + " ringgit");
@@ -146,4 +143,3 @@ public class CurrencyConverterMain {
 
                 }
             }
-
