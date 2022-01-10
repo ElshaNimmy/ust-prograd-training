@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Transfer</title>
+    <style>
+        ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+    </style>
+</head>
+<body>
+
+    <ul>
+        <li><a class="active" href="/Home">Home</a></li>
+
+        <li><a href="/Profile">Profile</a></li>
+        <li><a href="/Login">Logout</a></li>
+
+    </ul>
+    <form action="/Transfer" method="post">
+<!--        <p> From Account Number  : <input type="text" name="account" placeholder="Enter a/c no:" th:value="${accountNumber}"></p><br/>-->
+    <p> Account Number  : <input type="text" name="toaccount" placeholder="Enter a/c no:"></p><br/>
+    <p>Amount : <input type="text" name="amount" placeholder="Enter amount:"></p><br/>
+    <input type="submit" value="Transfer"><br/>
+        <img src="Abcanmazingbetterchoice.JPG" width="1000" height="400">
+
+</form>
+</body>
+</html>
