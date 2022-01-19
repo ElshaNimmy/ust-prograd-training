@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Payment</title>
+    <style>
+        ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+    </style>
+</head>
+<body>
+<ul>
+    <li><a href="/Home">Home</a></li>
+
+    <li><a href="/seat">Seating</a></li>
+    <li><a href="/Bookings">Status</a></li>
+    <li><a href="/">Logout</a></li>
+
+</ul>
+<center><p>Successfully Booked !!!</p>
+<label for="amount"><b>Amount</b></label><br/>
+<p><span th:text="${amount}" id="amount"></span></p><br/>
+
+<label for="movieName"><b>Movie Name</b></label><br/>
+<p><span th:text="${movieName}" id="movieName"></span></p><br/>
+
+<label for="showId"><b>Show</b></label><br/>
+    <p><span th:text="${showId}" id="showId"></span></p><br/>
+
+<!--<label for="idSeat"><b>Seat Number</b></label><br/>-->
+<!--    <p><span th:text="${idSeat}" id="idSeat"></span></p><br/>-->
+</center>
+</body>
+</html>
